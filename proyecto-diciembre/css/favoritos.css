@@ -1,0 +1,247 @@
+/* ====================================
+   PÁGINA DE FAVORITOS
+   ==================================== */
+
+.favorites-section {
+    min-height: 80vh;
+    padding: 100px 20px 50px;
+}
+
+.favorites-header {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.favorites-header h1 {
+    color: #fff;
+    font-size: 3rem;
+    margin-bottom: 15px;
+    animation: fadeInDown 0.6s ease;
+}
+
+.favorites-header h1 i {
+    color: #ff4757;
+    margin-right: 15px;
+}
+
+.favorites-count {
+    color: aqua;
+    font-size: 1.2rem;
+    font-weight: 500;
+}
+
+.favorites-count span {
+    font-weight: bold;
+    font-size: 1.4rem;
+}
+
+/* Cuadrícula de favoritos */
+.favorites-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 30px;
+    margin-top: 30px;
+}
+
+.favorite-card {
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(10px);
+    border-radius: 15px;
+    overflow: hidden;
+    position: relative;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    border: 1px solid rgba(0, 255, 255, 0.1);
+    animation: fadeInUp 0.5s ease;
+}
+
+.favorite-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 30px rgba(0, 255, 255, 0.3);
+    border-color: aqua;
+}
+
+.favorite-card img {
+    width: 100%;
+    height: 350px;
+    object-fit: cover;
+    display: block;
+}
+
+.favorite-card-overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: linear-gradient(to top, rgba(0,0,0,0.95), transparent);
+    padding: 20px;
+}
+
+.favorite-card-title {
+    color: #fff;
+    font-size: 1.2rem;
+    font-weight: 600;
+    margin-bottom: 8px;
+}
+
+.favorite-card-rating {
+    color: #ffd700;
+    font-size: 1rem;
+    margin-bottom: 10px;
+}
+
+.favorite-card-actions {
+    display: flex;
+    gap: 10px;
+}
+
+.btn-remove {
+    background: rgba(255, 71, 87, 0.2);
+    border: 2px solid #ff4757;
+    color: #ff4757;
+    padding: 8px 15px;
+    border-radius: 8px;
+    font-size: 14px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.btn-remove:hover {
+    background: #ff4757;
+    color: #fff;
+    transform: scale(1.05);
+}
+
+.btn-view {
+    background: rgba(0, 255, 255, 0.2);
+    border: 2px solid aqua;
+    color: aqua;
+    padding: 8px 15px;
+    border-radius: 8px;
+    font-size: 14px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.btn-view:hover {
+    background: aqua;
+    color: #000;
+    transform: scale(1.05);
+}
+
+/* Estado vacío */
+.empty-state {
+    text-align: center;
+    padding: 80px 20px;
+    animation: fadeIn 0.6s ease;
+}
+
+.empty-state i {
+    font-size: 120px;
+    color: rgba(255, 255, 255, 0.1);
+    margin-bottom: 30px;
+}
+
+.empty-state h2 {
+    color: #fff;
+    font-size: 2rem;
+    margin-bottom: 15px;
+}
+
+.empty-state p {
+    color: #aaa;
+    font-size: 1.1rem;
+    margin-bottom: 30px;
+}
+
+.btn-primary {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    background: linear-gradient(135deg, aqua 0%, #00e6e6 100%);
+    color: #000;
+    padding: 14px 30px;
+    border-radius: 10px;
+    text-decoration: none;
+    font-size: 1.1rem;
+    font-weight: bold;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(0, 255, 255, 0.3);
+}
+
+.btn-primary:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 20px rgba(0, 255, 255, 0.5);
+}
+
+/* Animaciones */
+@keyframes fadeInDown {
+    from {
+        opacity: 0;
+        transform: translateY(-30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .favorites-header h1 {
+        font-size: 2rem;
+    }
+
+    .favorites-grid {
+        grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+        gap: 20px;
+    }
+
+    .favorite-card img {
+        height: 300px;
+    }
+
+    .empty-state i {
+        font-size: 80px;
+    }
+
+    .empty-state h2 {
+        font-size: 1.5rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .favorites-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .favorites-header h1 {
+        font-size: 1.8rem;
+    }
+}

@@ -1,0 +1,38 @@
+
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Iniciar sesión</title>
+    <link rel="stylesheet" href="../css/login.css">
+    <link rel="stylesheet" href="../css/toast.css">
+</head>
+
+<body>
+
+    <h1>Iniciar sesión</h1>
+
+    <form action="/proyecto-final/proyecto-diciembre/php/login.php" method="POST">
+
+        <label for="email">Correo electrónico</label>
+        <div class="input-wrapper">
+            <input class="controls" name="email" type="email" id="email" placeholder="usuario@ejemplo.com" required>
+        </div>
+
+        <label for="clave">Contraseña</label>
+        <div class="input-wrapper">
+            <input class="controls" name="clave" type="password" id="clave" placeholder="Ingresa tu contraseña"
+                required>
+        </div>
+
+        <button type="submit">Entrar</button>
+        <a href="index.html" class="back-link">Volver al registro</a>
+    </form>
+
+    <script src="../js/toast.js"></script>
+    <script src="../js/login.js"></script>
+</body>
+
+</html>

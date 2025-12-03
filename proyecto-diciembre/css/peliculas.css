@@ -1,0 +1,93 @@
+body{
+    font-family: Arial, sans-serif;
+    background: #101018;
+    color: white;
+    margin: 0;
+    padding: 0;
+}
+
+.header{
+    text-align: center;
+    padding: 20px;
+}
+
+h2{
+    margin-left: 40px;
+}
+
+nav {
+    display: flex;
+    justify-content: center;
+    gap: 40px; /* espacio entre ellos */
+}
+
+.cards-container{
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+    gap: 20px;
+    padding: 20px;
+}
+
+.card{
+    background: #1c1c28;
+    border-radius: 10px;
+    padding: 15px;
+    text-align: center;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.4);
+}
+
+.card img{
+    width: 100%;
+    border-radius: 10px;
+    height: 250px;
+    object-fit: cover;
+}
+
+.card .btn{
+    margin-top: 10px;
+    padding: 10px 20px;
+    background: #ff004c;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.card .btn:hover{
+    background: #ff2e6a;
+}
+
+/* MODAL */
+.modal{
+    display: none;
+    position: fixed;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    background: rgba(0,0,0,0.8);
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+}
+
+.modal-content{
+    background: #1f1f2d;
+    padding: 20px;
+    border-radius: 10px;
+    width: 90%;
+    max-width: 600px;
+    text-align: center;
+}
+
+.modal-content video{
+    width: 100%;
+    border-radius: 10px;
+    margin-top: 10px;
+}
+
+.close{
+    float: right;
+    font-size: 28px;
+    cursor: pointer;
+    color: white;
+}

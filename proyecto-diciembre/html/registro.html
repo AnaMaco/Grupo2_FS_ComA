@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registro</title>
+    <link rel="stylesheet" href="../css/registro.css">
+</head>
+
+<body>
+
+    <h1>Registro de Usuario</h1>
+
+    <form action="/proyecto-final/proyecto-diciembre/php/regis.php" method="post">
+
+        <label for="nombres">Nombres</label>
+        <div class="input-wrapper">
+            <input class="controls" name="nombres" type="text" id="nombres" placeholder="Ingresa tus nombres" required>
+        </div>
+
+        <label for="apellidos">Apellidos</label>
+        <div class="input-wrapper">
+            <input class="controls" name="apellidos" type="text" id="apellidos" placeholder="Ingresa tu apellido"
+                required>
+        </div>
+
+        <label for="email">Email</label>
+        <div class="input-wrapper">
+            <input class="controls" name="email" type="email" id="email" placeholder="correo@ejemplo.com.ar" required>
+        </div>
+
+        <label for="clave">Contraseña</label>
+        <div class="input-wrapper">
+            <input class="controls" name="clave" type="password" id="clave" placeholder="Ingresa tu contraseña"
+                required>
+        </div>
+
+
+        <button type="submit">Registrarse</button>
+        <a href="login.html" class="back-link">Volver al inicio</a>
+    </form>
+
+    <script src="../js/registro.js"></script>
+</body>
+
+</html>
